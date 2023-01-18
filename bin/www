@@ -1,0 +1,11 @@
+let app = require('../app');
+let debug = require('debug')('nbe3u1anthology:server');
+let http = require('http');
+
+let port = 999
+app.set('port', port);
+
+let server = http.createServer(app);
+
+server.listen(port);
+server.on('listening', () => console.log('Listening on ' + port));
