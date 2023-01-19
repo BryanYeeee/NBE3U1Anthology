@@ -36,6 +36,7 @@ body {
 }
 
 #nav {
+    z-index: 5;
     position: fixed;
     display: flex;
     top: 0;
@@ -86,17 +87,17 @@ body {
     width: 30%;
     color: #d3f6ec;
     background: linear-gradient(90deg, rgba(76, 100, 115, 1) 10%, rgba(76, 114, 115, 1) 50%, rgba(66, 102, 79, 1) 90%);
-    ;
     transform: skew(-30deg) translateX(-10%);
 }
 
 #nav span {
     position: absolute;
     transform: skew(30deg) translateX(10%);
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 #content {
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     white-space: pre-wrap;
@@ -106,4 +107,21 @@ body {
     width: 595px;
     background-color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.image {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #86B9B0;
+    background-image: url(./reflections/Reflect2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.source::first-line {
+    text-indent: 0;
 }
