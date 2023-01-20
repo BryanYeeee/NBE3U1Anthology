@@ -4,6 +4,7 @@ $(async function () {
     $('#nav').prepend(logo)
 
     let reflect1 = await fetch('./public/reflections/Reflect1.txt').then(response => response.text())
+    $('#content').html(reflect1)
     let reflect3 = await fetch('./public/reflections/Reflect3.txt').then(response => response.text())
     let final = await fetch('./public/reflections/Final.txt').then(response => response.text())
             
