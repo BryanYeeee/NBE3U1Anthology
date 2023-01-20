@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:not(li, ul) {
     font-family: 'Inknut Antiqua', serif;
 }
 
@@ -20,8 +23,8 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background-image: url(./images/bg.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -87,6 +90,7 @@ body {
     width: 30%;
     color: #d3f6ec;
     background: linear-gradient(90deg, rgba(76, 100, 115, 1) 10%, rgba(76, 114, 115, 1) 50%, rgba(66, 102, 79, 1) 90%);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
     transform: skew(-30deg) translateX(-10%);
 }
 
@@ -111,8 +115,8 @@ body {
 
 .image {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #86B9B0;
@@ -122,6 +126,6 @@ body {
     background-size: contain;
 }
 
-.source::first-line {
-    text-indent: 0;
+ul > li {
+    padding-left:2rem;
 }

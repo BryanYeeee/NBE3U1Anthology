@@ -4,6 +4,8 @@ $(async function () {
     $('#nav').prepend(logo)
 
     let reflect1 = await fetch('./public/reflections/Reflect1.txt').then(response => response.text())
+    let reflect3 = await fetch('./public/reflections/Reflect3.txt').then(response => response.text())
+    let final = await fetch('./public/reflections/Final.txt').then(response => response.text())
             
     $('<div>').addClass('navbtn').text('Reflection 1').hover(
         function () {
@@ -13,7 +15,6 @@ $(async function () {
             $(this).text('Reflection ' + $(this).data('number'));
         }
     ).data('number', 1).prependTo($('#nav #btns')).click(() => {
-
         $('#content').animate({ 'opacity': '0' }, 250, 'linear', function () {
             $('#content').html(reflect1)
             $('#content').animate({ 'opacity': '1' }, 250, 'linear');
@@ -40,7 +41,10 @@ $(async function () {
             $(this).text('Reflection ' + $(this).data('number'));
         }
     ).data('number', 3).prependTo($('#nav #btns')).click(() => {
-
+        $('#content').animate({ 'opacity': '0' }, 250, 'linear', function () {
+            $('#content').html(reflect3)
+            $('#content').animate({ 'opacity': '1' }, 250, 'linear');
+        })
     });
 
     $('<div>').addClass('navbtn').text('Final Reflection').hover(
@@ -51,6 +55,9 @@ $(async function () {
             $(this).text('Final Reflection');
         }
     ).prependTo($('#nav #btns')).click(() => {
-
+        $('#content').animate({ 'opacity': '0' }, 250, 'linear', function () {
+            $('#content').html(final)
+            $('#content').animate({ 'opacity': '1' }, 250, 'linear');
+        })
     });
 });
